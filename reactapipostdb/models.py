@@ -1,14 +1,15 @@
 from django.db import models
+from django.utils import translation
 
 # Create your models here.
 class infomodel(models.Model):
-    fullname=models.CharField(max_length=50)
-    dob=models.CharField(max_length=10)
-    gender=models.CharField(max_length=10)
-    address1=models.CharField(max_length=50)
-    address2=models.CharField(max_length=50)
-    email=models.CharField(max_length=20)
-    phonenumber=models.CharField(max_length=12)
+    fullname=models.CharField(max_length=50,null=True)
+    dob=models.CharField(max_length=10,null=True)
+    gender=models.CharField(max_length=10,null=True)
+    address1=models.CharField(max_length=50,null=True)
+    address2=models.CharField(max_length=50,null=True)
+    email=models.CharField(max_length=20,null=True)
+    phonenumber=models.CharField(max_length=12,null=True)
     healthplanchoice=models.CharField(max_length=20,null=True)
     insurer=models.CharField(max_length=20,null=True)
     healthplanname=models.CharField(max_length=30,null=True)
@@ -17,10 +18,11 @@ class infomodel(models.Model):
     subscriberid=models.CharField(max_length=20,null=True)
     groupid=models.CharField(max_length=20,null=True)
     planid=models.CharField(max_length=20,null=True)
-    datacategories=models.CharField(max_length=20)
-    optionalyourname=models.CharField(max_length=50)
-    dateofsignature=models.CharField(max_length=10)
-    signatureurl=models.CharField(max_length=200)
+    phonenumber=models.CharField(max_length=12,null=True)
+    datacategories=models.CharField(max_length=20,null=True)
+    optionalyourname=models.CharField(max_length=50,null=True)
+    dateofsignature=models.CharField(max_length=10,null=True)
+    signatureurl=models.CharField(max_length=200,null=True)
     datetimeofupdate=models.DateTimeField(auto_now=True)
 
 
